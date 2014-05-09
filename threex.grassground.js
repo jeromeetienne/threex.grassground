@@ -19,7 +19,7 @@ THREEx.GrassGround	= function(opts){
 	texture.repeat.y= repeatY
 	texture.anisotropy = anisotropy;
 
-
+	// build object3d
 	var geometry	= new THREE.PlaneGeometry(width, height, segmentsW, segmentsH)
 	var material	= new THREE.MeshBasicMaterial({
 		map	: texture,
@@ -27,7 +27,7 @@ THREEx.GrassGround	= function(opts){
 	})
 	var object3D	= new THREE.Mesh(geometry, material)
 	object3D.rotateX(-Math.PI/2)
-	
+	// return the just-built object3d
 	return object3D;
 }
 

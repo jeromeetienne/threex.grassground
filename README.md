@@ -1,12 +1,7 @@
 threex.grassground
 ==================
 
-It is a 
-[threex](http://jeromeetienne.github.io/threex/) module 
-for 
-[three.js](http://threejs.org)
-which provide an grassground. This is an very simple, it may be usefull
-when starting a new project, or for educational purpose.
+Threex.grassground is a [three.js game extension](http://www.threejsgames.com/extensions/) which provides a simple mesh for a flat grass. It is a content extension to help you start your game. It contains a diffuse and a normal texture from [three.js](http://threejs.org). Play with the normal scale and the texture repeat to fit your needs.  This could be an easily displayed grassground for your field or you terrain in your three.js game.  
 
 Show Don't Tell
 ===============
@@ -53,9 +48,13 @@ var groundMesh	= new THREEx.GrassGround({
 })
 ```
 
-
-
-
+Possible Improvements
+=====================
+* make geometry tunable
+  * opts.geometry
+  * thus able to use circle geometry for example
+  * var geometry	= new THREE.CircleGeometry(width/2, 32)
+* 
 
 
 

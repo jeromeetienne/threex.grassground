@@ -8,7 +8,7 @@
 
 	var onRenderFcts= [];
 	var scene	= new THREE.Scene();
-	var camera	= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 1000);
+	var camera	= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 10000);
 	camera.position.z = 3;
 
 	//////////////////////////////////////////////////////////////////////////////////
@@ -20,7 +20,7 @@
 		repeatX		: 10,
 		repeatY		: 10,
 	})
-	mesh.scale.multiplyScalar(10)
+	// mesh.scale.multiplyScalar(10)
 	console.dir(mesh)
 	scene.add(mesh)
 	
