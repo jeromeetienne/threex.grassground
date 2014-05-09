@@ -10,20 +10,32 @@ THREEx.GrassGround	= function(opts){
 	var repeatX	= opts.repeatX !== undefined ? opts.repeatX : 1
 	var repeatY	= opts.repeatY !== undefined ? opts.repeatY : 1
 	var anisotropy	= opts.anisotropy !== undefined ? opts.anisotropy : 16
-	// create the texture	
-	var textureUrl	= THREEx.GrassGround.baseUrl + 'images/grasslight-small.jpg'
-	var texture	= THREE.ImageUtils.loadTexture(textureUrl);
-	texture.wrapS	= THREE.RepeatWrapping;
-	texture.wrapT	= THREE.RepeatWrapping;
-	texture.repeat.x= repeatX
-	texture.repeat.y= repeatY
-	texture.anisotropy = anisotropy;
+
+	// create the textureDiffuse	
+	var textureDiffuseUrl	= THREEx.GrassGround.baseUrl + 'images/grasslight-small.jpg'
+	var textureDiffuse	= THREE.ImageUtils.loadTexture(textureDiffuseUrl);
+	textureDiffuse.wrapS	= THREE.RepeatWrapping;
+	textureDiffuse.wrapT	= THREE.RepeatWrapping;
+	textureDiffuse.repeat.x= repeatX
+	textureDiffuse.repeat.y= repeatY
+	textureDiffuse.anisotropy = anisotropy;
+
+	// create the textureNormal	
+	var textureNormalUrl	= THREEx.GrassGround.baseUrl + 'images/grasslight-small-nm.jpg'
+	var textureNormal	= THREE.ImageUtils.loadTexture(textureNormalUrl);
+	textureNormal.wrapS	= THREE.RepeatWrapping;
+	textureNormal.wrapT	= THREE.RepeatWrapping;
+	textureNormal.repeat.x	= repeatX
+	textureNormal.repeat.y	= repeatY
+	textureNormal.anisotropy= anisotropy;
 
 	// build object3d
 	var geometry	= new THREE.PlaneGeometry(width, height, segmentsW, segmentsH)
-	var material	= new THREE.MeshBasicMaterial({
-		map	: texture,
-		color	: 0x44FF44,
+	var material	= new THREE.MeshPhongMaterial({
+		map		: textureDiffuse,
+		normalMap	: textureNormal,
+                normalScale	: new THREE.Vector2(1,1).multiplyScalar(0.5),
+		color		: 0x44FF44,
 	})
 	var object3D	= new THREE.Mesh(geometry, material)
 	object3D.rotateX(-Math.PI/2)

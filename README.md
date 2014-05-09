@@ -1,7 +1,7 @@
 threex.grassground
 ==================
 
-Threex.grassground is a [three.js game extension](http://www.threejsgames.com/extensions/) which provides a simple mesh for a flat grass. It is a content extension to help you start your game. It contains a diffuse and a normal texture from [three.js](http://threejs.org). Play with the normal scale and the texture repeat to fit your needs.  This could be an easily displayed grassground for your field or you terrain in your three.js game.  
+Threex.grassground is a [three.js game extension](http://www.threejsgames.com/extensions/) which provides a simple mesh for a flat grass. It is a content extension to help you start your game. It contains a [diffuse and a normal texture from three.js](https://github.com/mrdoob/three.js/tree/master/examples/textures/terrain). Play with the normal scale and the texture repeat to fit your needs.  This could be an easily displayed grassground for your field or you terrain in your three.js game.  
 
 Show Don't Tell
 ===============
