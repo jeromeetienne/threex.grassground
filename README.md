@@ -9,6 +9,10 @@ Show Don't Tell
 \[[view source](https://github.com/jeromeetienne/threex.grassground/blob/master/examples/basic.html)\] :
 It shows how to include a grass ground into your own code.
 
+A Screenshot
+============
+[![screenshot](https://raw.githubusercontent.com/jeromeetienne/threex.grassground/master/examples/images/screenshot-threex-grassground-512x512.jpg)](http://jeromeetienne.github.io/threex.grassground/examples/basic.html)
+
 How To Install It
 =================
 
